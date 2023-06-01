@@ -1,0 +1,250 @@
+.watch-cont {
+    width: 100%;
+    min-height: 85vh;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.2) 8%, transparent 8%);
+    background-position: 0% 0%;
+    background-size: 6vmin 6vmin;
+    background-color: rgb(10, 10, 10);
+    animation: back 30s linear infinite;
+}
+
+.wsub-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 20px;
+}
+
+
+.wlist {
+    background-color: black;
+    width: 65vw;
+    padding: 10px;
+}
+
+.buy {
+    background-color: black;
+    width: 30vw;
+    padding: 10px;
+    position: sticky;
+    top: 20px
+}
+
+.watchlist-items {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.solo-items {
+    width: 60vw;
+    gap: 20px;
+    padding: 2px;
+    display: flex;
+    background-color: black;
+    /* border: 5px double #202020; */
+}
+
+.solo-items>.wimage {
+    width: 10vw;
+    padding: 10px;
+
+}
+
+.solo-items>div>img {
+    width: inherit;
+    aspect-ratio: 1;
+}
+
+.wdetail-cont {
+    padding: 2px;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.wdetail-cont>.witem-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.heading {
+    background: -webkit-linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.witem-detail sup {
+    color: grey;
+    font-size: 1.1rem;
+}
+
+.del {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.witem-detail {
+    width: 30vw;
+}
+
+.noselect {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #e62222;
+}
+
+.noselect,
+.noselect span {
+    transition: 200ms;
+    border-radius: none;
+}
+
+.noselect .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+}
+
+.noselect .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.noselect svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.noselect:hover {
+    background: #ff3636;
+}
+
+.noselect:hover .text {
+    color: transparent;
+}
+
+.noselect:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.noselect:focus {
+    outline: none;
+}
+
+.noselect:active .icon svg {
+    transform: scale(0.8);
+}
+
+.buy-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid grey;
+}
+
+.buy-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buy-detail img {
+    width: 30px;
+    aspect-ratio: 1;
+}
+
+.check-cont {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.checkout {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica, "sans-serif";
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #198754;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.checkout:hover {
+    background: #03C988;
+}
+
+.checkout>svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+}
+
+.checkout:hover svg {
+    transform: translateX(5px);
+}
+
+.checkout:active {
+    transform: scale(0.95);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* When you change the amount of characters in the h1, you have to change 
+  the with: 14ch and  steps(14, end), if there is 14 characters, put 14, 
+  if there is 20 put 20 */
+.animation {
+    scale: 3;
+    color: white;
+    font: bold 200% Consolas, Monaco, monospace;
+    border-right: .1em solid white;
+    width: 13.20ch;
+    margin: 2em 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: typing 5s steps(13, end),
+        blink-caret .5s step-end infinite alternate;
+}
